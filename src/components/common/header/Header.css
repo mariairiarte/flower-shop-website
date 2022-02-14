@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: lightpink;
+}
+
+.header-logo {
+    margin: 20px
+}
+
+.header-navbar {
+    margin: 20px;
+}

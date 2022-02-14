@@ -1,0 +1,27 @@
+.search-bar {
+    background-color: blue;
+    margin: 10px;
+}
+
+.list-view {
+    background-color: chartreuse;
+    padding: 10px;
+}
+
+.list-view-search {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.list-view-items{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.item {
+    background-color: aqua;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+}
