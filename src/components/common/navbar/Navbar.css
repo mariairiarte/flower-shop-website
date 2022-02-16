@@ -1,4 +1,8 @@
 .navbar {
     display: flex;
-    flex-direction: row;
+    
+}
+
+.navbar-item {
+    margin-left: 5px;
 }

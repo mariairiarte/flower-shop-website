@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Image = () => {
+const Image = ({ image }) => {
     return (
         <div>
-            <img src={this.props.image} />
+            <img src={image} style={{ width: "100%"}} />
         </div>
     )
 }

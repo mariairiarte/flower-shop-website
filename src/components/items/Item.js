@@ -7,21 +7,30 @@ const Item = ({ id, image, name, scientificName, price }) => {
     let navigate = useNavigate();
     
     function handleClick() {
-        console.log(id)
         navigate({
             pathname: `/${id}`
         });
     }
 
     return (
-        <div className='item'>
-            <div onClick={ handleClick } >
-                <img src={ image } style={{ width: "150px"}} />
-                <h1>{ name }</h1>
-                <h1>{ scientificName }</h1>
-                <h1>{ price }</h1>
-            </div>
-        </div>
+        <section className='item'>
+            <section onClick={ handleClick } className='item-content'>
+                <section className='item-content-image'>
+                    <img src={ image } style={{ width: "100%"}} />
+                </section>
+                <section className='item-content-info'>
+                    <section className='item-content-info-section'>
+                        { name }
+                    </section>
+                    <section>
+                        { scientificName }
+                    </section>
+                    <section>
+                        { price } €
+                    </section>
+                </section>
+            </section>
+        </section>
     )
     
 }

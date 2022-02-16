@@ -1,24 +1,43 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { Back, Image, Description } from '.'
 
-class DetailView extends Component {
+const DetailView = ({ item }) => {
 
-    render() {
-        return (
-           <section className='detail-view'>
-               <section className='detail-view-back'>
+    const { 
+        image, 
+        name, 
+        scientificName, 
+        price, 
+        wateringsPerWeek,
+        fertilizer,
+        height
+    } = item
 
-               </section>
-               <section className='detail-view-item'>
-                    <section className='detail-view-item-image'>
-                        {/* <Image /> */}
-                    </section>
-                    <section className='detail-view-item-description'>
-                        {/* <Description /> */}
-                    </section>
-               </section>
-           </section>
-        )
-    }
+    useState()
+
+    return (
+        <section className='detail-view'>
+            <section className='detail-view-top'>
+                <Back />
+            </section>
+            <section className='detail-view-bottom'>
+                <section className='detail-view-item-image'>
+                    <Image image={image} />
+                </section>
+                <section className='detail-view-item-description'>
+                    <Description 
+                        name={name}
+                        scientificName={scientificName}
+                        price={price}
+                        wateringsPerWeek={wateringsPerWeek}
+                        fertilizer={fertilizer}
+                        height={height}
+                    />
+                </section>
+            </section>
+        </section>
+    )
+    
   
 }
 

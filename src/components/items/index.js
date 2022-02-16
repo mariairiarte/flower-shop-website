@@ -4,6 +4,7 @@ import Image from './Image'
 import Item from './Item'
 import ListView from './ListView'
 import Search from './Search'
+import Back from './Back'
 
 export {
     Description,
@@ -11,5 +12,6 @@ export {
     Image,
     Item,
     ListView,
-    Search
+    Search,
+    Back
 }

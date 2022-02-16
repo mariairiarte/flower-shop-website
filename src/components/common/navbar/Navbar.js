@@ -7,8 +7,12 @@ const Navbar = () => {
 
     return(
        <section className='navbar'>
-            <Link to="/">Home</Link>
-            <Link to="/">About</Link>
+            <section className='navbar-item'>
+                <Link to="/">Home</Link>
+            </section>
+            <section className='navbar-item'>
+                <Link to="/">About</Link>
+            </section>
        </section>
     )
 
