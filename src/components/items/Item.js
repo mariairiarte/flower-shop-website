@@ -16,7 +16,7 @@ const Item = ({ id, image, name, scientificName, price }) => {
         <section className='item'>
             <section onClick={ handleClick } className='item-content'>
                 <section className='item-content-image'>
-                    <img src={ image } style={{ width: "100%"}} />
+                    <img alt="" src={ image } style={{ width: "100%"}} />
                 </section>
                 <section className='item-content-info'>
                     <section className='item-content-info-section'>

@@ -10,7 +10,7 @@ const items = [{
     scientificName: 'Rosa chinensis Jacq.',
     price: 4.95,
     wateringsPerWeek: 3,
-    fertilizer: "fosforado",
+    fertilizer: "Fosforado",
     height: "4 cm"
 }, {
     code: 2,
@@ -20,7 +20,7 @@ const items = [{
     scientificName: 'Lavandula',
     price: 4.95,
     wateringsPerWeek: 3,
-    fertilizer: "fosforado",
+    fertilizer: "Fosforado",
     height: "5 cm"
 }, {
     code: 3,
@@ -30,7 +30,7 @@ const items = [{
     scientificName: 'Lilium candidum',
     price: 4.95,
     wateringsPerWeek: 3,
-    fertilizer: "fosforado",
+    fertilizer: "Fosforado",
     height: "3 cm"
 }, {
     code: 4,
@@ -40,7 +40,7 @@ const items = [{
     scientificName: 'Jasminum',
     price: 4.95,
     wateringsPerWeek: 3,
-    fertilizer: "fosforado",
+    fertilizer: "Fosforado",
     height: "2 cm"
 }, {
     code: 5,
@@ -50,7 +50,17 @@ const items = [{
     scientificName: 'Narcissus',
     price: 4.95,
     wateringsPerWeek: 3,
-    fertilizer: "fosforado",
+    fertilizer: "Fosforado",
+    height: "4.5 cm"
+}, {
+    code: 6,
+    id: "006",
+    image: 'https://decoracionyjardines.com/wp-content/uploads/2013/02/tulipanes.jpg',
+    name: 'Tulipán',
+    scientificName: 'Tulipa',
+    price: 2.95,
+    wateringsPerWeek: 2,
+    fertilizer: "Fosforado",
     height: "4.5 cm"
 }] 
 
@@ -60,7 +70,7 @@ const fakeFetchItems =() => {
 
 const fakeFetchItem = (id) => {
     for(var i = 0; i < items.length; i++) {
-        if (items[i].id == id) {
+        if (items[i].id === id) {
             return(items[i])
         }        
     }

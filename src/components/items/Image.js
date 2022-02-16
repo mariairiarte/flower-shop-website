@@ -3,7 +3,7 @@ import React from 'react'
 const Image = ({ image }) => {
     return (
         <div>
-            <img src={image} style={{ width: "100%"}} />
+            <img alt="" src={image} style={{ width: "100%"}} />
         </div>
     )
 }

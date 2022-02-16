@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Routes, Route } from "react-router-dom";
+
 import { Home, ProductDetail } from './views'
 
 class App extends Component {

@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Item from './Item'
-import Search from './Search'
+import { SearchBar } from './searchBar'
 
 const ListView = ({ items }) => { 
+
+    const [searchTerm, setSearchTerm] = useState("")
 
     return (
         <section className='list-view'>
             <section className='list-view-search'>
-                <Search />
+                <SearchBar setSearchTerm={ setSearchTerm } />
             </section>
             <section className='list-view-items'>
-                {items.map((item) => {
+                {items.filter((item) => {
+                    if (searchTerm == "") {
+                        return item
+                    } else if (item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
+                               item.scientificName.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                        return item
+                    }
+                }).map((item) => {
                     const { code, id, image, name, scientificName, price } = item
                     return (
                         <Item  

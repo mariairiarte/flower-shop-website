@@ -8,7 +8,7 @@ class Home extends Component { // Product list
 
     render() {
 
-        const items = fakeFetchItems()
+        const items = fakeFetchItems() // Petición API
 
         return (
             <div>
