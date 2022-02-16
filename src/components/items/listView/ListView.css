@@ -1,0 +1,17 @@
+.list-view {
+    background-color: chartreuse;
+    padding: 10px;
+}
+
+.list-view-search {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.list-view-items{
+    /* display: flex;
+    flex-direction: row; */
+    display: flex;
+    flex-wrap: wrap;
+
+}

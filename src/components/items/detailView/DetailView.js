@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import { Back, Image, Description } from '.'
+import React from 'react'
+import { Back, Image, Description } from '..'
+
+import './DetailView.css'
 
 const DetailView = ({ item }) => {
 
     const { 
-        image, 
+        imgUrl, 
         name, 
-        scientificName, 
+        binomialName, 
         price, 
         wateringsPerWeek,
-        fertilizer,
-        height
+        fertilizerType,
+        heightInCm
     } = item
-
-    useState()
 
     return (
         <section className='detail-view'>
@@ -22,16 +22,16 @@ const DetailView = ({ item }) => {
             </section>
             <section className='detail-view-bottom'>
                 <section className='detail-view-item-image'>
-                    <Image image={image} />
+                    <Image image={ imgUrl } />
                 </section>
                 <section className='detail-view-item-description'>
                     <Description 
-                        name={name}
-                        scientificName={scientificName}
-                        price={price}
-                        wateringsPerWeek={wateringsPerWeek}
-                        fertilizer={fertilizer}
-                        height={height}
+                        name={ name }
+                        binomialName={ binomialName} 
+                        price={ price }
+                        wateringsPerWeek={ wateringsPerWeek }
+                        fertilizerType={fertilizerType}
+                        heightInCm={heightInCm}
                     />
                 </section>
             </section>

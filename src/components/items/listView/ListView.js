@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
 import Item from './Item'
-import { SearchBar } from './searchBar'
+import { SearchBar } from '../searchBar'
+
+import './ListView.css'
 
 const ListView = ({ items }) => { 
 
@@ -14,24 +16,29 @@ const ListView = ({ items }) => {
             </section>
             <section className='list-view-items'>
                 {items.filter((item) => {
-                    if (searchTerm == "") {
+                    if (searchTerm === "") {
                         return item
                     } else if (item.name.toLowerCase().includes(searchTerm.toLocaleLowerCase()) ||
-                               item.scientificName.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                               item.binomialName.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                         return item
+                    }  else {
+                        return false
                     }
                 }).map((item) => {
-                    const { code, id, image, name, scientificName, price } = item
+
+                    const { id, imgUrl, name, binomialName, price } = item
+
                     return (
                         <Item  
-                            key={code} 
+                            key={id} 
                             id={id}
-                            image={image} 
+                            imgUrl={imgUrl} 
                             name={name}  
-                            scientificName={scientificName} 
+                            binomialName={binomialName} 
                             price={price}
                         />
                     )
+
                 })}
             </section>
         </section>

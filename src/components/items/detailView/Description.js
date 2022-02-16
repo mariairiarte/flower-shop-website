@@ -4,11 +4,11 @@ const Description = (props) => {
 
     const {
         name, 
-        scientificName, 
+        binomialName, 
         price, 
         wateringsPerWeek,
-        fertilizer,
-        height
+        fertilizerType,
+        heightInCm
     } = props
 
     return (
@@ -17,19 +17,19 @@ const Description = (props) => {
                 Nombre: { name }
             </section>
             <section className="detail-view-item-description-content-item">
-                Nombre científico: { scientificName }
+                Nombre científico: { binomialName }
             </section>
             <section className="detail-view-item-description-content-item">
                 Precio: { price }
             </section>
             <section className="detail-view-item-description-content-item">
-                Riegos por semana: { wateringsPerWeek}
+                Riegos por semana: { wateringsPerWeek }
             </section>
             <section className="detail-view-item-description-content-item">
-                Fertilizante: { fertilizer}
+                Fertilizante: { fertilizerType }
             </section>
             <section className="detail-view-item-description-content-item">
-                Altura: { height }
+                Altura: { heightInCm } cm
             </section>
         </section>
     )

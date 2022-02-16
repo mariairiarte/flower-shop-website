@@ -1,8 +1,9 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../../styles/index.css'
 
-const Item = ({ id, image, name, scientificName, price }) => {
+import './Item.css'
+
+const Item = ({ id, imgUrl, name, binomialName, price }) => {
 
     let navigate = useNavigate();
     
@@ -16,14 +17,14 @@ const Item = ({ id, image, name, scientificName, price }) => {
         <section className='item'>
             <section onClick={ handleClick } className='item-content'>
                 <section className='item-content-image'>
-                    <img alt="" src={ image } style={{ width: "100%"}} />
+                    <img alt="" src={ imgUrl } style={{ width: "100%"}} />
                 </section>
                 <section className='item-content-info'>
                     <section className='item-content-info-section'>
                         { name }
                     </section>
                     <section>
-                        { scientificName }
+                        { binomialName }
                     </section>
                     <section>
                         { price } €

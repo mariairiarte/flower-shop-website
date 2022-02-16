@@ -1,23 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { Header } from '../../components/common'
 import { DetailView } from '../../components/items'
 
-import { fakeFetchItem } from '../../fake' 
+import axios from 'axios'
 
 const ProductDetail = () => {
 
-    let { id } = useParams()
+    const [item, setItem] = useState({})
 
-    let item = fakeFetchItem(id) // Fetch product by id
+    const { id } = useParams()
 
+    useEffect(() => {
+
+        const fetchData = async () => {
+            const { data } = await axios.get(`https://dulces-petalos.herokuapp.com/api/product/${id}`)
+            setItem(data)
+        }
+
+        fetchData();
+
+    }, [id]);
+    
     return (
         <div>
             <Header />
             <DetailView item={ item } />
         </div>
     )
+
 
 }
 

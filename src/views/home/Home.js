@@ -1,19 +1,28 @@
 import React, { Component } from 'react'
 import { Header } from '../../components/common'
 import { ListView } from '../../components/items'
-
-import { fakeFetchItems } from '../../fake' // Dummy data
+import axios from 'axios'
 
 class Home extends Component { // Product list
 
-    render() {
+    state = {
+        items: []
+    }
 
-        const items = fakeFetchItems() // Petición API
+    componentDidMount() {
+        axios.get(`https://dulces-petalos.herokuapp.com/api/product`)
+            .then(res => {
+                const items = res.data
+                this.setState({ items })
+            })
+    }
+
+    render() {
 
         return (
             <div>
                 <Header />
-                <ListView items={ items } />
+                <ListView items={ this.state.items } />
             </div>
         )
     }
