@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-
 import { Header } from '../../components/common'
-import { DetailView } from '../../components/items'
-
+import { DetailView } from '../../components/containers'
 import axios from 'axios'
+
+import './ProductDetail.css'
 
 const ProductDetail = () => {
 
@@ -29,7 +29,6 @@ const ProductDetail = () => {
             <DetailView item={ item } />
         </div>
     )
-
 
 }
 

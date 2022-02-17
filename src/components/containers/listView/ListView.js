@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
-
-import Item from './Item'
-import { SearchBar } from '../searchBar'
-
+import { Item } from '..'
+import { SearchBar } from '../../common'
 import './ListView.css'
 
 const ListView = ({ items }) => { 
@@ -47,4 +45,3 @@ const ListView = ({ items }) => {
 }
 
 export default ListView
-

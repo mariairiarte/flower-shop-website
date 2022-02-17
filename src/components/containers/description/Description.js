@@ -1,5 +1,7 @@
 import React from "react";
 
+import './Description.css'
+
 const Description = (props) => {
 
     const {
@@ -12,23 +14,23 @@ const Description = (props) => {
     } = props
 
     return (
-        <section className="detail-view-item-description-content">
-            <section className="detail-view-item-description-content-item">
+        <section className="description-content">
+            <section className="description-content-item">
                 Nombre: { name }
             </section>
-            <section className="detail-view-item-description-content-item">
+            <section className="description-content-item">
                 Nombre científico: { binomialName }
             </section>
-            <section className="detail-view-item-description-content-item">
-                Precio: { price }
+            <section className="description-content-item">
+                Precio: { price } €
             </section>
-            <section className="detail-view-item-description-content-item">
+            <section className="description-content-item">
                 Riegos por semana: { wateringsPerWeek }
             </section>
-            <section className="detail-view-item-description-content-item">
+            <section className="description-content-item">
                 Fertilizante: { fertilizerType }
             </section>
-            <section className="detail-view-item-description-content-item">
+            <section className="description-content-item">
                 Altura: { heightInCm } cm
             </section>
         </section>

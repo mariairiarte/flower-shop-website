@@ -1,6 +1,6 @@
 import React from 'react'
-import { Back, Image, Description } from '..'
-
+import { Description } from '..'
+import { Back, Image } from '../../common'
 import './DetailView.css'
 
 const DetailView = ({ item }) => {
@@ -22,14 +22,14 @@ const DetailView = ({ item }) => {
             </section>
             <section className='detail-view-bottom'>
                 <section className='detail-view-item-image'>
-                    <Image image={ imgUrl } />
+                    <Image image={imgUrl} />
                 </section>
                 <section className='detail-view-item-description'>
                     <Description 
-                        name={ name }
-                        binomialName={ binomialName} 
-                        price={ price }
-                        wateringsPerWeek={ wateringsPerWeek }
+                        name={name}
+                        binomialName={binomialName} 
+                        price={price}
+                        wateringsPerWeek={ wateringsPerWeek}
                         fertilizerType={fertilizerType}
                         heightInCm={heightInCm}
                     />
@@ -38,7 +38,6 @@ const DetailView = ({ item }) => {
         </section>
     )
     
-  
 }
 
 export default DetailView

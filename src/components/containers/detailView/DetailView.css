@@ -17,7 +17,6 @@
 .detail-view-bottom {
     display: flex;
     flex-direction: row;
-    background-color: aqua;
 }
 
 .detail-view-item-image {
@@ -30,6 +29,8 @@
     width: 50%;
     padding: 10px;
 }
+
+/* */
 
 .detail-view-item-description-content {
     background-color: mediumslateblue;

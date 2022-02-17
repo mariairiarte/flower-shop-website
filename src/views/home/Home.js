@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Header } from '../../components/common'
-import { ListView } from '../../components/items'
+import { ListView } from '../../components/containers'
 import axios from 'axios'
+import './Home.css'
 
-class Home extends Component { // Product list
+class Home extends Component { 
 
     state = {
         items: []
@@ -11,9 +12,10 @@ class Home extends Component { // Product list
 
     componentDidMount() {
         axios.get(`https://dulces-petalos.herokuapp.com/api/product`)
-            .then(res => {
-                const items = res.data
-                this.setState({ items })
+            .then((res) => {
+                this.setState({ 
+                    items: res.data 
+                })
             })
     }
 
