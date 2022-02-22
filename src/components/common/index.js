@@ -1,5 +1,5 @@
 import Header from "./header";
-import Navbar from "./navBar";
+import Navbar from "./navbar";
 import Back from "./back";
 import Image from "./image";
 import SearchBar from "./searchBar";
