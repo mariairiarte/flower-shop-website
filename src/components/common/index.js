@@ -1,12 +1,12 @@
 import Header from "./header";
-import Navbar from "./navBar";
+import NavBar from "./navBar"
 import Back from "./back";
 import Image from "./image";
 import SearchBar from "./searchBar";
 
 export {
     Header,
-    Navbar,
+    NavBar,
     Back,
     Image,
     SearchBar
