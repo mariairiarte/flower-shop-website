@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { NavBar } from '../../common'
+import { Navbar } from '../../common'
 
 import './Header.css'
 
@@ -12,7 +12,7 @@ const Header = () => {
                 <Link to="/">Dulces Pétalos</Link>
             </section>
             <section className='header-navbar'>
-                <NavBar />
+                <Navbar />
             </section> 
         </div>
     )
